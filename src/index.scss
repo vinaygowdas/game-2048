@@ -1,0 +1,183 @@
+@import "./variables";
+
+body {
+    margin: 0;
+    font-family: 'PoetsenOne',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $smoke;
+}
+
+// Flex
+
+.f-d {
+    display: flex;
+}
+
+.f-vt {
+    flex-direction: column;
+}
+
+.f-v-s {
+    align-items: flex-start;
+}
+
+.f-v-c {
+    align-items: center;
+}
+
+.f-v-e {
+    align-items: flex-end;
+}
+
+.f-h-s {
+    justify-content: flex-start;
+}
+
+.f-h-c {
+    justify-content: center;
+}
+
+.f-h-e {
+    justify-content: flex-end;
+}
+
+.f-h-sb {
+    justify-content: space-between;
+}
+
+// Grid
+
+.grid-container {
+    order: 1;
+    padding: 5px;
+    outline: none;
+    position: relative;
+}
+
+.grid-container .tile-block,
+.tile {
+    user-select: none;
+    cursor: default;
+}
+
+.tile-row {
+    margin-bottom: 14px;
+}
+
+.tile-block,
+.tile {
+    width: 96px;
+    height: 96px;
+    margin-right: 14px;
+    display: inline-block;
+    font-size: 48px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 12px;
+    font-family: 'PoetsenOne';
+    line-height: 92px;
+    color: $snow;
+    background-color: $metal;
+}
+
+.tile-block:last-child {
+    margin-right: 0;
+}
+
+.tile0 {
+    background-color: #dcb;
+}
+
+.tile2 {
+    background-color: $tile2;
+}
+
+.tile4 {
+    background-color: $tile4;
+}
+
+.tile8 {
+    background-color: $tile8;
+}
+
+.tile16 {
+    background-color: $tile16;
+}
+
+.tile32 {
+    background-color: $tile32;
+}
+
+.tile64 {
+    background-color: $tile64;
+}
+
+.tile128 {
+    background-color: $tile128;
+}
+
+.tile256 {
+    background-color: $tile256;
+}
+
+.tile512 {
+    background-color: $tile512;
+}
+
+.tile1024 {
+    background-color: $tile1024;
+    font-size: 36px;
+}
+
+.tile2048 {
+    background-color: $tile2048;
+    font-size: 36px;
+}
+
+.tile4096 {
+    background-color: $tile4096;
+    font-size: 36px;
+}
+
+.tile {
+    position: absolute;
+}
+
+.tile.merged {
+    display: none;
+}
+
+.tile.merged.isMoving {
+    display: inline;
+}
+
+.tile.new {
+    animation-duration: 0.2s;
+    animation-name: newTile;
+    animation-fill-mode: forwards;
+    animation-delay: 0.15s;
+    transform: scale(0);
+}
+
+@keyframes newTile {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+// Scrollbar
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #69696950;
+}
